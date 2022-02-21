@@ -86,20 +86,21 @@ if __name__ == '__main__':
 
     # --------------
     # 测试用例2：带空格的句子
-    sentence = "我 爱 北京 天安门 ， 天安门 上 太阳升 。 人民 领袖 毛主席 ，指引 我们 向前进 。 I love you."
-    print(f'sentence: {sentence}')
+    # sentence = "我 爱 北京 天安门 ， 天安门 上 太阳升 。 人民 领袖 毛主席 ，指引 我们 向前进 。 I love you."
+    # print(f'sentence: {sentence}')
+    # 测试方法3：
+    # print(_tokenize_chinese_chars(text=sentence))
+
     # 读取测试到文件
-    # with codecs.open(filename=r'D:\CCFClassfication\all_dataset\test.txt', mode='r', encoding='utf-8') as f:
-    #     for sentence in f.readlines():
-    #         # 测试方法1：使用jieba分词进行切分
-    #         tokenize_sentence = tokenize_(text=sentence)
-    #         print(f'tokenize_sentence: {tokenize_sentence}')
-    #         demo(text=sentence, do_basic_tokenize=False)
-    #         print('===' * 15)
+    with codecs.open(filename=r'D:\CCFClassfication\all_dataset\test.txt', mode='r', encoding='utf-8') as f:
+        for sentence in f.readlines():
+            # 测试方法1：使用jieba分词进行切分
+            tokenize_sentence = tokenize_(text=sentence)
+            print(f'tokenize_sentence: {tokenize_sentence}')
+            demo(text=sentence, do_basic_tokenize=False)
+            print('==' * 15)
     # 测试方法2：三个步骤：1.加载模型 2.分词 3.转换成token
     # demo(text=sentence, do_basic_tokenize=False)
-    # 测试方法3：
-    print(_tokenize_chinese_chars(text=sentence))
 
     # --------------
     # 测试用例：测试jieba分词函数+读数据函数
