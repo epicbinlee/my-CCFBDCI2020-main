@@ -94,7 +94,7 @@ if __name__ == '__main__':
     # --------------
     # 读取测试到文件
     with codecs.open(filename=r'D:\CCFClassfication\all_dataset\test.txt', mode='r', encoding='utf-8') as f:
-        for sentence in f.readlines():
+        for sentence in tqdm(f.readlines()):
             # 测试方法1：使用jieba分词进行切分
             tokenize_sentence = tokenize_(text=sentence)
             print(f'tokenize_sentence: {tokenize_sentence}')
