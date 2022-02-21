@@ -91,6 +91,7 @@ if __name__ == '__main__':
     # 测试方法3：
     # print(_tokenize_chinese_chars(text=sentence))
 
+    # --------------
     # 读取测试到文件
     with codecs.open(filename=r'D:\CCFClassfication\all_dataset\test.txt', mode='r', encoding='utf-8') as f:
         for sentence in f.readlines():
@@ -99,6 +100,8 @@ if __name__ == '__main__':
             print(f'tokenize_sentence: {tokenize_sentence}')
             demo(text=sentence, do_basic_tokenize=False)
             print('==' * 15)
+
+    # --------------
     # 测试方法2：三个步骤：1.加载模型 2.分词 3.转换成token
     # demo(text=sentence, do_basic_tokenize=False)
 
